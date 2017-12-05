@@ -321,9 +321,10 @@ public abstract class AbstractJDBCSchemaFetcher implements
 				cleanSQL = cleanSQL.substring(0, cleanSQL.length() - 1);
 			}
 			final SQLHelper sqlHelper = cp.getDatabaseType().getSQLHelper(null);
-			String appendLimit0SQL = sqlHelper.getTestSelectSQL(cleanSQL);
-			LOG.info("execute sql:" + appendLimit0SQL);
-			stmt = conn.prepareStatement(appendLimit0SQL);
+//			String appendLimit0SQL = sqlHelper.getTestSelectSQL(cleanSQL);
+//			LOG.info("execute sql:" + appendLimit0SQL);
+//			stmt = conn.prepareStatement(appendLimit0SQL);
+			stmt = conn.prepareStatement(cleanSQL);
 			getExportHelper().configStatement(stmt);
 			stmt.setFetchSize(1);
 			rs = stmt.executeQuery();
