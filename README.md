@@ -38,3 +38,5 @@ cd cubridmigration/com.cubrid.cubridmigration.ui.testfragment/
 wget http://ftp.cubrid.org/CUBRID_Docs/CMT/cmt-test-3rdparty-drivers.zip
 unzip cmt-test-3rdparty-drivers.zip -d jdbc
 ```
+
+test
